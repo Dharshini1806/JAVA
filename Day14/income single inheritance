@@ -1,0 +1,77 @@
+import java.util.*;
+class income 
+{
+
+    double income;
+    double tax=0;
+   
+    void income(double x) 
+    {
+      income=x;
+      System.out.println("Income : "+income);
+    }
+}
+class tax extends income 
+{
+  void test()
+  {
+    if(income<=250000) 
+    {
+       System.out.println("No Tax");
+    } 
+    else if(income>=250001&&income<=500000) 
+    {
+       tax=income*10/100;
+       System.out.println("Yoy want to pay 10% of amount "+tax);
+    } 
+    else if(income>=500001&&income<=1000000)
+    {
+        tax=income*20/100;
+       System.out.println("Yoy want to pay 20% of amount "+tax);
+    } 
+    else if(income>=1000001)
+    {
+        tax=income*30/100;
+      System.out.println("Yoy want to pay 30% of amount "+tax);
+    }
+  }
+}
+class IncomeTax 
+{
+  public st…
+[12:32 pm, 31/07/2024] Sakthi Manoj SSE: import java.util.*;
+class employee 
+{
+    double salary;
+    double house;
+    double travel;
+    double gym;
+    double allowance;
+    void salary(double x) 
+    {
+      salary=x;
+      System.out.println("Employee Basic Salary : "+salary);
+    }
+}
+class allowance extends employee 
+{
+  void allowance(double a,double b,double c)
+  {
+     house=a;
+     travel=b;
+     gym=c;
+     
+     allowance=salary+house+travel+gym;
+     System.out.println("Employee Salary with Allowance : "+allowance);
+  }
+}
+class employeeallowance 
+{
+  public static void main(String arg[]) 
+  {
+     
+     allowance obj=new allowance();
+     obj.salary(50000);
+     obj.allowance(8000,5000,2500);
+  }
+}
