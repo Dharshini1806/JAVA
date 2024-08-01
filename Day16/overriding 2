@@ -2,9 +2,9 @@
 class A
 {
   int a,b,c;
-  void get(int x)
+  void get(int x,int y)
   {
-    a=x;b=x;
+    a=x;b=y;
   }
   void cal()
   {
