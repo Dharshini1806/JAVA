@@ -1,0 +1,39 @@
+//constructor overriding
+class A
+{
+	int a,b,c;
+	A(int x,int y)
+	{
+		a=x;
+		b=y;
+	}
+	void cal()
+	{
+		c=a+b;
+		System.out.println("Addition1 : "+c);
+	}
+}
+class B extends A
+{
+	int d,e;
+	B(int x,int y,int z)
+	{
+		super(x,y);
+		d=z;
+	}
+	void cal()
+	{
+		super.cal();
+		e=a+b+c+d;
+		System.out.println("Addition2 : "+e);	
+	}
+}
+class Construnctoroverriding
+{
+	public static void main(String arg[])	
+	{
+		
+		B obj=new B(10,20,30);
+		obj.cal();	
+	}
+}
