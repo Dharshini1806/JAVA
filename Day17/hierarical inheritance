@@ -1,0 +1,60 @@
+//Hierarchical
+class A
+{
+	int a,b,c;
+	void get1(int x,int y)
+	{
+		a=x;
+		b=y;
+	}
+	void cal1()
+	{
+		c=a+b;
+		System.out.println("Addition1 : "+c);
+	}
+}
+class B extends A
+{
+	int d,e;
+	void get2(int z)
+	{
+		d=z; 
+	}
+	void cal2()
+	{
+		e=a+b+c+d;
+		System.out.println("Addition2 : "+e);	
+	}
+}
+class C extends A
+{
+	int f,g;
+	void get3(int x)
+	{
+		f=x; 
+	}
+	void cal3()
+	{
+		g=c+f;
+		System.out.println("Addition3 : "+g);	
+	}
+
+}
+class Hieraricaltest
+{
+	public static void main(String arg[])	
+	{
+		
+		B obj1=new B();
+		obj1.get1(10,20);
+		obj1.cal1();
+		obj1.get2(20);
+		obj1.cal2();
+
+		C obj=new C();
+		obj.get1(10,20);
+		obj.cal1();
+		obj.get3(30);
+		obj.cal3();	
+	}
+}
